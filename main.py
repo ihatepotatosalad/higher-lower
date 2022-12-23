@@ -6,8 +6,13 @@ def play_game():
     score = 0
     in_session = True
     while in_session:
+        
         choice_a = random.choice(data.data)
         choice_b=random.choice(data.data)
+
+        while choice_a == choice_b:
+            choice_a = random.choice(data.data)
+            choice_b=random.choice(data.data)
 
         
         print(f'Score: {score}')
